@@ -110,7 +110,7 @@ function remover(ss){
     let max = 0;
     let min = masterySet[0].dupecount;
     let minspot = 0;
-
+    let spot = 0;
     let z =0;
     for(z = 1; z < masterySet.length; z++){
         if( max < masterySet[z].dupecount){
