@@ -49,33 +49,19 @@ const aliens = [
 ]
 // my solution
 function population(r){
-    let mastery = [];
-    let master = [];
-    let dupes = 0;
-    let newObj ={
-        year: 0,
-        count: 0,
-    }
+    let lifeyears = [];
     for(let i=0;i<r.length;i++){
         for(let j=r[i][0]; j <= r[i][1]; j++){
-            if(master.includes(j)){
-                dupes++;
-            }
-            master.push(j);
-
-            newObj ={
-                year: j,
-                count: dupes,
-            }
+            lifeyears.push(j); // j is currently a representation of a living year.
         }
-        mastery.push(newObj);
     }
-    console.log(`find the mode of ${master} done`);
-    let ans2 = mode(master);
+    console.log(`find the mode of ${lifeyears} done`);
+    let ans2 = mode(lifeyears);
     console.log(` mode === ${ans2}`);
     return ans2;
 }
 // population(people);
 console.log(population(aliens));
+console.log(population(people));
 
 // The correct answer for her data is the year 2000
