@@ -1,3 +1,20 @@
+// Google asked me to write an algorithm to remove a set from a set of sets that is the most or least unique.  I don't remember which one.
+
+// Why would an algorithm about removing or preserving uniqueness be useful?
+
+///  thought 1:  Compression
+//                    -- Preserves uniqueness, get's rid of duplicate information that is unneccessary to our senses.
+//  thought 2:  Virus Protection
+//                    -- Removes uniqueness, maybe your codebase is infected but can quickly remove unfamiliar code because this algorithm removes the most unique thing in a system, so if the virus doesn't match the rest of your code it is removable.
+
+// I think compression makes the most sense.  How can I modify data without messing up its form?
+
+// in machine learning maybe you need to know which info to commit and which info to remember based on if you've seen it before.
+
+// this algorithm values novelty by devaluing duplicate information.  In an array of array of all blues and one red, the array with red is guarenteed to be preserved.  red/blue mixture essense is unchanged while making room for other operations/memory.
+
+// As you can see by console output on inspect element, my final set is a compressed version of the first set.
+
 var setOfsets = [
     [
         3,4,5,6,7,8,9
