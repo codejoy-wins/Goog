@@ -46,13 +46,15 @@ const OthersetOfsets2 = [
 
 // write a function that removes the most unique set     (in a set of sets)
 
+// Lots of different strategies:
+
 // give each set a score of how much it shares with the data set.
 
 // give each set a score of how much novelty it contributes.
 
-// first collect and count each number of iteration for each thing
-
 // percentage unique, dupes added, 
+
+// Edge Cases: Self-Similarity (not solved)
 
 
 function remover(ss){
@@ -83,9 +85,6 @@ function remover(ss){
     // console.log(`newSet ${newSet}`);
     // console.log(`dupes ${dupes}`);
     // now I know what the dupes are, I can go back through the original setOfsets checking for which array has most dupes.
-
-    
-       
 
     let masterySet = [];
 
@@ -125,14 +124,8 @@ function remover(ss){
     console.log(`max of ${max}  dupes discovered at set ${spot} `);
     console.log(`min of ${min}  dupes discovered at set ${minspot} `);
 
-
-
-
-
     // console.log(`min of ${min}  dupes discovered at set ${minspot} `);
-
-
-// now remove the guilty set.
+    // now remove the guilty set.
 
     let lessUniqueSet = [];
     for(let h=0; h < ss.length; h++){
@@ -144,7 +137,6 @@ function remover(ss){
     final set is ${lessUniqueSet}
     ********
     `);
-
 }
 
 remover(setOfsets);
